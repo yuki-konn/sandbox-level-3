@@ -15,26 +15,66 @@
   <body>
     <header></header>
     <main>
+      <h2 class="m-3">Class</h2>
       <section>
+        <pre>
+        <b>Class</b>
+        -----------------------------------
         <button onclick="classExample()">Class example</button><br />
         <output id="outputTag"></output>
+        </pre>
       </section>
       <section>
+        <pre>
+        <b>Method</b>
+        -----------------------------------
+        A method is a function in an object or class.
+        In a class, the <code>function</code> keyword is not used for methods.
+
         <button onclick="methodExample()">Method example</button><br />
-        <output id="outputTag2"></output>
+        <output id="outputTag1"></output>
+        </pre>
       </section>
       <section>
+        <pre>
+        <b>Keyword this</b>
+        -----------------------------------
+        Use the keyword <code>this</code> to access properties and methods from within an object.
+        Use the usual dot notation.
+        Think of <code>this</code> as the name of an object.
+
         <button onclick="thisExample()">This example</button><br />
-        <output id="outputTag3"></output>
+        <output id="outputTag2"></output>
+        </pre>
       </section>
       <section>
+        <pre>
+        <b>toString Method</b>
+        -----------------------------------
+        The <code>toString</code> method customizes how an object is output.
+        This method is automatically called when an object is used like a string.
+        
+        Every class has it's own <code>toString</code> method.
+        Without <code>this</code> method it would output <code>[object Object]</code>.
+
         <button onclick="toStringExample()">To String example</button><br />
-        <output id="outputTag4"></output>
+        <output id="outputTag3"></output>
+        </pre>
       </section>
       <section>
-        <button onclick="constructorExample()">Constructor example</button>
+        <pre>
+        <b>Constructor Method</b>
+        -----------------------------------
+        The <code>constructor</code> is a <code>method</code> that automatically
+        runs when the object is created.
+
+        Use the <code>constructor</code> to accept parameters and initialize values.
+        Every Class has it's an empty constructor until you make it.
+
+        <button onclick="contructorExample()">Constructor example</button>
         <br />
-        <output id="outputTag5"></output>
+        <output id="outputTag4"></output>
+        </pre>
       </section>
     </main>
     <footer></footer>

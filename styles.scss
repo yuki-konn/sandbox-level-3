@@ -1,6 +1,35 @@
 $codeColor: rgb(199, 76, 76);
+// $codeBlock: rgb(0, 189, 214);
+$title-color: rgb(255, 196, 0);
+$bg-color: rgb(29, 29, 29);
+$text-color: rgb(255, 255, 255);
+$header-color1: rgb(128, 0, 187);
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+
+  h2 {
+    color: $header-color1;
+  }
+}
 pre {
+  b {
+    color: $title-color;
+  }
   code {
+    overflow-wrap: normal;
     color: $codeColor;
   }
+  // .codeBlock {
+  //   color: $codeBlock;
+  // }
+}
+
+// INDEX.HTML
+#index-h1 {
+  color: $header-color1;
+}
+.index-h2 {
+  color: $title-color;
 }

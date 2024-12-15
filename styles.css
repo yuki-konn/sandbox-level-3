@@ -1,3 +1,23 @@
+body {
+  background-color: rgb(29, 29, 29);
+  color: rgb(255, 255, 255);
+}
+body h2 {
+  color: rgb(128, 0, 187);
+}
+
+pre b {
+  color: rgb(255, 196, 0);
+}
 pre code {
+  overflow-wrap: normal;
   color: rgb(199, 76, 76);
+}
+
+#index-h1 {
+  color: rgb(128, 0, 187);
+}
+
+.index-h2 {
+  color: rgb(255, 196, 0);
 }
