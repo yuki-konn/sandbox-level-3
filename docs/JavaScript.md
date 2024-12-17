@@ -2,7 +2,8 @@
 
 ### Shortcuts
 
-`SHIFT` + `ALT` + `DOWN` = shortcut to copy a line of code and add below the original line
+- `SHIFT` + `ALT` + `DOWN` = Copy the line of code and add below the original line.
+- `SHIFT` + `CTRL` + `K` = delete entire line.
 
 ### Arrays
 
@@ -97,6 +98,28 @@ function output(message = "", outputTag = "outputTag", shouldAppend = true)
 - `!` Not
 - `&&` And
 - `||` Or
+
+### Property chaining
+
+`const cylinderCount = myCar.components.engine.parts.cylinders.count;`
+
+- Using object dot notation, properties can be chained together.
+- Access deeper property levels with just one line.
+- Like accessing a file embedded in mulitiple folders.
+
+### Item chaining
+
+`const value = myArrays[0][2];`
+
+- Using array notation, items can be chained together.
+- Access deeper array levels with just one line.
+
+### Item and property chaining
+
+`const value = event.target[0].value;`
+
+- Using array and object dot notation, items and properties can be chained together.
+- Access deeper array and object levels with just one line.
 
 ## Loops
 
@@ -302,7 +325,6 @@ import { outputModule } from "./outputModule.js";
 window.moduleExample = myModule;
 
 function myModule() {
-  debugger;
   testModule();
   outputModule("This is the outputModule.");
 }
@@ -318,9 +340,7 @@ function myModule() {
 - Create objects that bundle related data and functions together.
 - The keywords `class`, `new`, and `this` are used to achieve OOP.
 
-```javascript
-const column = new Column("my content");
-```
+`const column = new Column("my content");`
 
 ### Folder structure
 
@@ -356,7 +376,10 @@ const column = new Column("my content");
 3. Start typing the module
 4. Select the module from the popup list.
 
-###
+### How to find the class of an item
+
+1. Use the `debugger` to explore the object.
+2. The class is in the `[[Prototype]]`.
 
 ```javascript
 
