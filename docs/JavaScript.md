@@ -96,8 +96,16 @@ function output(message = "", outputTag = "outputTag", shouldAppend = true)
 - `===` Equal
 - `!==` Not equal
 - `!` Not
+  - It returns the opposite of the condition.
+  - It returns false if the condition is true.
+  - It returns true if the condition is false.
 - `&&` And
+  - It returns true when both conditions are true.
+  - It returns false if both conditions are not true.
+  - It returns false if any of the conditions are false.
 - `||` Or
+  - It returns true if any of the conditions are true.
+  - It returns false if none of the conditions are true.
 
 ### Property chaining
 
@@ -120,6 +128,12 @@ function output(message = "", outputTag = "outputTag", shouldAppend = true)
 
 - Using array and object dot notation, items and properties can be chained together.
 - Access deeper array and object levels with just one line.
+
+### Event object properties
+
+`event = new Event()`
+
+- To view the properties of the event object, set the default value.
 
 ## Loops
 
@@ -379,11 +393,62 @@ function myModule() {
 ### How to find the class of an item
 
 1. Use the `debugger` to explore the object.
-2. The class is in the `[[Prototype]]`.
+2. The class is in the `[[Prototype]]`
 
-```javascript
+### Node.js
 
-```
+- A program that can run JavaScript files in the terminal.
+- Node.js is JavaScript for the backend.
+- Slightly different than JavaScript for the frontend.
+- To run a file type `node greeting.js`
+
+### NPM
+
+- Node Package Manager
+- A program that comes with Node.js
+- Lets Node.js use modules.
+- Use npm to install code from other JavaScript programmers.
+- [www.npmjs.com](https://www.npmjs.com/)
+
+### How to configure Node.js for modules
+
+1. Initialize NPM
+
+   - `npm init`
+   - Select the default options by pressing ENTER.
+
+2. It creates `package.json`
+3. Add `"type": "module"`
+
+### Named exports/imports
+
+`import { outputModule } from "./outputModule.js";`
+
+- Must use curly braces.
+- Must use the exact module name.
+
+### Default exports/imports
+
+greeting.js
+`export default function greeting(name)`
+
+greetingTest.js
+`import sayHiTo from "./greeting.js";`
+
+- Do not use curly braces
+- Can use a different name than the module.
+- Add the `default` keyword to the export.
+- There can only be 1 default export per file.
+
+### require function
+
+- The old way of importing modules.
+- Not compatible with web browsers even though it's JavaScript
+- Can be repalced with default import syntax.
+
+### Node modules
+
+- Node modules are reusable code that can be installed with NPM.
 
 <!-- ###
 
