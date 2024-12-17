@@ -6,9 +6,11 @@ class Column {
   constructor(content = "") {
     /*****************************************
      * - THE constructor IS A METHOD THAT
-     *   AUTOMATICALLY RUNS WHEN THE OBEJCT IS CREATED.
+     *   AUTOMATICALLY RUNS WHEN THE OBJECT IS CREATED.
      * - USE THE constructor TO ACCEPT PARAMETERS
      *   AND INITIALIZE VALUES
+     *
+     * - Every Class has it's own empty constructor until you make it.
      *****************************************/
 
     console.log("The content of this column will be: " + content);
@@ -20,6 +22,11 @@ class Column {
 class Car {
   color = "red";
 
+  constructor(newColor = "") {
+    this.color = newColor;
+    console.warn("A new car has been created.");
+  }
+
   honkHorn() {
     // IN A CLASS, THE function KEYWORD IS NOT USED FOR METHODS.
     console.log("Honk honk!");
@@ -30,7 +37,7 @@ class Car {
      * - USE THE KEYWORD this TO ACCESS PROPERTIES AND
      *   METHODS FROM WITHIN AN OBJECT.
      *****************************************/
-    console.log("The color is " + this.color);
+    console.error("The color is " + this.color);
   }
 
   toString() {
@@ -39,6 +46,9 @@ class Car {
      *   HOW AN OBJECT IS OUTPUT.
      * - THIS METHOD IS AUTOMATICALLY CALLED
      *   WHEN THE OBJECT IS USED LIKE A STRING.
+     *
+     * - EVERY CLASS HAS IT'S OWN toString METHOD.
+     * - WITHOUT THIS METHOD IT WOULD OUTPUT [object Object].
      *****************************************/
     return "This car's color is " + this.color;
   }
@@ -61,11 +71,11 @@ function methodExample() {
    * - A METHOD IS A FUNCTION IN AN OBJECT OR CLASS
    * - IN A CLASS, THE function KEYWORD IS NOT USED FOR METHODS.
    *****************************************/
-  const car = new Car();
+  const car = new Car("red");
   car.honkHorn();
-  output(car.toString(), "outputTag2");
+  output(car.toString(), "outputTag1");
 }
-//this example - 12/7 Slide 81
+//this example
 function thisExample() {
   debugger;
   /*****************************************
@@ -93,8 +103,8 @@ function toStringExample() {
    * - THE toString METHOD CUSTOMIZES
    *   HOW AN OBJECT IS OUTPUT.
    *****************************************/
-  const car = new Car();
-  output(car, "outputTag4");
+  const car = new Car("red");
+  output(car + "<br>", "outputTag3");
 }
 
 function contructorExample() {
@@ -105,5 +115,6 @@ function contructorExample() {
    * - IT CAN ACCEPT PARAMETERS FOR THE OBJECT.
    *****************************************/
 
-  const column = new Column("I'm column 1.");
+  const car = new Car("black");
+  // const column = new Column("I'm column 1.");
 }

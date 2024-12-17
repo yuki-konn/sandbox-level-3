@@ -37,6 +37,6 @@ function forInExample() {
 
   for (let propertyName in myObject) {
     const value = myObject[propertyName];
-    output(`${propertyName} is ${value}<br>`, "outputTag2");
+    output(`${propertyName} is ${value}<br>`, "outputTag1");
   }
 }
