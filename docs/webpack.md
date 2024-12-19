@@ -9,8 +9,8 @@
 
 `npm install webpack webpack-cli`
 
-- `webpack` - The main module with function and classes.
-- `webpack-cli` - A controller that allows webpack to be used in the command line.
+- `webpack` The main module with function and classes.
+- `webpack-cli` A controller that allows webpack to be used in the command line.
 
 ### Running Webpack
 
@@ -27,6 +27,7 @@
 ```
 
 - The packed (or bundled) file is generated in the `dist` folder as `main.js`
+- `dist` stands for distribution
 - Change `main.js` to the HTML file instead of the original module.
 
 `<script src="./dist/main.js"></script>`
