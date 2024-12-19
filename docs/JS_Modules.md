@@ -190,3 +190,11 @@ greetingTest.js
 
 - Modules that were installed from NPM.
 - Must be imported with their package name.
+
+### npx
+
+`npx webpack`
+
+- Node Package eXecute
+- Runs node modules in the terminal.
+- Comes bundled with NPM.
